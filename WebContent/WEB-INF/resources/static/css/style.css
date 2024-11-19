@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f4f4f4;
+}
+
+.container {
+	width: 80%;
+	margin: 20px auto;
+	padding: 20px;
+	border-radius: 8px;
+}
+
+header {
+	background: #333;
+	color: #fff;
+	padding-top: 30px;
+	min-height: 70px;
+	border-bottom: #77aaff 3px solid;
+}
+
+header a {
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+header ul {
+	padding: 0;
+	list-style: none;
+}
+
+header li {
+	float: left;
+	display: inline;
+	padding: 0 20px 0 20px;
+}
+
+.book-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.book {
+	background: #fff;
+	margin: 10px;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	width: 25%;
+	box-sizing: border-box;
+	text-align: center;
+	border-radius: 8px;
+}
+
+.book img {
+	max-width: 150px; /* Set the maximum width */
+	height: auto;
+	border-radius: 8px;
+}
+
+.book h3 {
+	margin: 10px 0;
+	font-size: 18px;
+}
+
+.book p {
+	color: #666;
+	margin: 5px 0;
+}
+
+.book .price {
+	color: #333;
+	font-weight: bold;
+}
+
+.favorite-button {
+	background-color: transparent;
+	border: none;
+	color: #ff6f61;
+	font-size: 24px;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+.favorite-button .fa-heart {
+	color: #ff6f61;
+}
+
+.favorite-button .fa-heart.filled {
+	color: #ff4c3b;
+}
