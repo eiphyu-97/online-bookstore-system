@@ -24,8 +24,6 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 
 @Configuration
 @EnableWebMvc
-@EnableTransactionManagement
-@EnableJpaRepositories(basePackages = "com.proj.bs.repositories")
 @ComponentScan(basePackages = "com.proj.bs")
 public class WebConfig implements WebMvcConfigurer {
 
