@@ -31,7 +31,7 @@ public class RegistrationController {
 	public String registerUser(User user) {
 		user.setPassword(encoder.encode(user.getPassword()));
 		Role userRole = new Role();
-		userRole.setName("ROLE_USER");
+		userRole.setName("ROLE_ADMIN");
 		Set<Role> roles = new HashSet<>();
 		roles.add(userRole);
 		user.setRoles(roles);

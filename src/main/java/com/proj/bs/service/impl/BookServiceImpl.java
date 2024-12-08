@@ -6,18 +6,36 @@ import com.proj.bs.model.Book;
 import com.proj.bs.repositories.BookRepository;
 import com.proj.bs.service.BookService;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
+
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class BookServiceImpl implements BookService {
 	
-	@Autowired
-	private BookRepository bookRepository;
+	private final BookRepository bookRepository;
 
 	@Override
 	public List<Book> retrieveAll() {
 		return bookRepository.findAll();
 	}
+
+	@Override
+	public Book retrieveById(long id) {
+		return bookRepository.findById(id).get();
+	}
+
+	@Override
+	public void save(Book book) {
+		bookRepository.save(book);
+	}
+
+	@Override
+	public void delete(long id) {
+		bookRepository.deleteById(id);
+	}
+
+	
 
 }

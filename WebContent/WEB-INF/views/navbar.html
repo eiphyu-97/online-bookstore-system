@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5" lang="en">
+<head>
+<title>Online Bookstore</title>
+<meta charset="UTF-8" />
+<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+	 <header th:fragment="header">
+        <div class="container">
+            <h1>Online Bookstore</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a th:href="@{/books}">Books</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li sec:authorize="hasRole('ADMIN')">
+                        <a th:href="@{/admin/books/add}">Add Book</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</body>
+</html>
